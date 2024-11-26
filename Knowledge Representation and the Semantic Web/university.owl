@@ -1,0 +1,873 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#"
+     xml:base="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university">
+        <rdfs:comment>University Ontology</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#admits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#admits">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#employs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#employs">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Staff"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasCampus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasCampus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasCourse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasCourse">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasLevel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Level"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#isLocated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#isLocated">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#teaches">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Professor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Address">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#HP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#HP">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Accounting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Accounting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Business"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasLevel"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Bachelors"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Administrative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Administrative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Bachelors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Bachelors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Business -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Business">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#CivilEngineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#CivilEngineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Engineering"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasLevel"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Bachelors"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#ComputerScience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#ComputerScience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Engineering"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasLevel"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Bachelors"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Course -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Course">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Department">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Doctor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Doctor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Health"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasLevel"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Doctorate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Doctorate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Doctorate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#EducationandCommunication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#EducationandCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Health -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Health">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#HumanResources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#HumanResources">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#InternationalBusiness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#InternationalBusiness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Business"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasLevel"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Bachelors"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#InternationalLaw -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#InternationalLaw">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Law"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasLevel"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Masters"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Law">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Level -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Level">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Masters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Masters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Nursing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Nursing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Health"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasLevel"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Masters"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#PHDStudents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#PHDStudents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Place"/>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#PostGraduateStudents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#PostGraduateStudents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Professor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Professor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#SustainableCommunication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#SustainableCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#EducationandCommunication"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasLevel"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Bachelors"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Teaching -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Teaching">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#EducationandCommunication"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasLevel"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Masters"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#UndergraduateStudents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#UndergraduateStudents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#AC100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#AC100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Accounting"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Course"/>
+        <HP rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.5</HP>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Ali -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Ali">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#PHDStudents"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Berlin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Berlin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#City"/>
+        <isLocated rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#France"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#CE100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#CE100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#CivilEngineering"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Course"/>
+        <HP rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.5</HP>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#CO100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#CO100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Course"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#SustainableCommunication"/>
+        <HP rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.5</HP>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#CS100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#CS100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#ComputerScience"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Course"/>
+        <HP rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.5</HP>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Gerbert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Gerbert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Professor"/>
+        <teaches rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#CS100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Gordy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Gordy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Professor"/>
+        <teaches rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#HE100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Jakes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Jakes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Professor"/>
+        <teaches rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#LW100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Jill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Jill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Professor"/>
+        <teaches rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#AC100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Piere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Piere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Professor"/>
+        <teaches rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#IB100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Smith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Professor"/>
+        <teaches rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#CE100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Teech -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Teech">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Professor"/>
+        <teaches rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#TS100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Waters -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Waters">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Professor"/>
+        <teaches rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#CO100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Weeks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#DR.Weeks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Professor"/>
+        <teaches rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#HE200"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#France">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Germany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#HE100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#HE100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Course"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Nursing"/>
+        <HP rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.5</HP>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#HE200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#HE200">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Course"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Doctor"/>
+        <HP rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.5</HP>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#IB100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#IB100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Course"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#InternationalBusiness"/>
+        <HP rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.5</HP>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Italy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Jim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Jim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#UndergraduateStudents"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Jonkoping -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Jonkoping">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#City"/>
+        <isLocated rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Sweden"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Jonkoping_University -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Jonkoping_University">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Business"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#EducationandCommunication"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Engineering"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Health"/>
+            </owl:Restriction>
+        </rdf:type>
+        <isLocated rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Jonkoping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#LW100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#LW100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Course"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#InternationalLaw"/>
+        <admits rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Mike"/>
+        <HP rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.5</HP>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Mike -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Mike">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#PostGraduateStudents"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Paris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#City"/>
+        <isLocated rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#France"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Rome -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Rome">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#City"/>
+        <isLocated rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Italy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Sweden -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Sweden">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#TS100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#TS100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Course"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Teaching"/>
+        <HP rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.5</HP>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University_of_Berlin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University_of_Berlin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Business"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Health"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Law"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasCampus rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Berlin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University_of_Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University_of_Paris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Business"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#EducationandCommunication"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Engineering"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasCampus rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Paris"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University_of_Rome -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University_of_Rome">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#University"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Business"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Engineering"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Health"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#hasDept"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Law"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasCampus rdf:resource="http://www.semanticweb.org/samuelmcmurray/ontologies/2022/10/university#Rome"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

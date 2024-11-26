@@ -1,0 +1,35 @@
+@prefix : <http://www.example.com/samuel-mcmurray/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/TR/rdf-schema/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dbo: <http://dbpedia.org/ontology/>.
+
+:Samuel_Mcmurray foaf:Person :Person.
+:Samuel_Mcmurray foaf:name "Samuel Mcmurray".
+:Samuel_Mcmurray foaf:givenname "Samuel".
+:Samuel_Mcmurray foaf:family_name "Mcmurray".
+:Samuel_Mcmurray foaf:nick "Sam".
+:Samuel_Mcmurray foaf:mbox "smcmurray1126@gmail.com".
+:Samuel_Mcmurray schema:birthDate "1989-11-26"^^xsd:date.
+:Samuel_Mcmurray foaf:phone "tel:+46730491126".
+:Samuel_Mcmurray dbo:college "Jönköping University".
+:Samuel_Mcmurray foaf:schoolHomepage "https://ju.se/".
+:Samuel_Mcmurray foaf:topic_interest "Computer Science".
+:Samuel_Mcmurray foaf:topic_interest "Anime/Manga".
+:Samuel_Mcmurray foaf:topic_interest "Video Games".
+:Samuel_Mcmurray foaf:knows :John_Thompson.
+:Samuel_Mcmurray foaf:knows :Ty_Herman.
+:Samuel_Mcmurray foaf:knows :Tsergio_Funk.
+
+:John_Thompson foaf:Person :Person.
+:John_Thompson foaf:name "John Thompson".
+:John_Thompson foaf:mbox "johnnyrotten@hotmail.com".
+
+:Ty_Herman foaf:Person :Person.
+:Ty_Herman foaf:name "Ty Herman".
+:Ty_Herman foaf:mbox "tyguy@gmail.com".
+
+:Tsergio_Funk foaf:Person :Person.
+:Tsergio_Funk foaf:name "Tsergio Funk".
+:Tsergio_Funk foaf:mbox "tfunk@gmail.com".
